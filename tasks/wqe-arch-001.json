@@ -1,0 +1,35 @@
+{
+  "id": "wqe-arch-001",
+  "title": "ADRs: snapshot/data format, source registry + license gate, web stack + client-side lookup, geocoding, freshness/corrections model",
+  "project": "water-quality-explainers",
+  "type": "design-spec",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["public-health", "water", "open-data", "software"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "water-quality-explainers turns open, authoritative drinking-water data (EPA SDWIS/ECHO, Water Quality Portal, USGS, state primacy agencies) into calm, plain-language, per-water-system explainers that never issue a safety verdict and always defer to official advisories. Before any non-pilot ingestion or schema finalization, the foundational architecture decisions must be recorded so that 'open/PD/CC only' licensing, reproducible provenance, and no-user-search-logging privacy are enforceable rather than aspirational.",
+  "objective": "Record Architecture Decision Records (ADRs) for: (1) the snapshot/data format and the deterministic raw-to-normalized reproducibility contract; (2) the source registry format and the CI license gate that rejects unregistered or unverified sources; (3) the static web stack and a client-side lookup approach that makes no-query-logging feasible; (4) open-data-only geocoding with attribution; and (5) the freshness/snapshot/versioning and corrections/erratum model.",
+  "acceptanceCriteria": [
+    "ADR for snapshot/data format specifies a deterministic raw-to-normalized contract (same source vintage + pipeline version yields the same checksummed snapshot)",
+    "ADR for the source registry + license gate defines how CI blocks ingestion from unregistered or unverified-license sources, and explicitly excludes proprietary aggregators and CCR-PDF copying",
+    "ADR for the web stack selects a static-first, a11y-friendly framework and a lookup approach (client-side index or pre-rendered) that requires no server-side query logging",
+    "ADR for geocoding uses open data only (US Census/TIGER public domain; OSM/Nominatim ODbL) with attribution and share-alike obligations recorded",
+    "ADR for freshness records the snapshot/versioning model and a corrections/erratum workflow that can purge and replace a wrong published figure",
+    "ADRs are committed as documents; the normalized schema (wqe-data-003) and pipeline (wqe-pipe-004) are sequenced to depend on these decisions"
+  ],
+  "resources": [
+    "C:\\code\\elyos\\planning\\projects\\water-quality-explainers\\PLAN.md",
+    "C:\\code\\elyos\\planning\\ROADMAP.md",
+    "https://echo.epa.gov/",
+    "https://www.waterqualitydata.us/",
+    "https://www.epa.gov/ground-water-and-drinking-water"
+  ],
+  "output": "A document (set of ADRs) recording the snapshot/data-format + reproducibility contract, source registry + license-gate mechanism, web stack + client-side lookup, open-data geocoding, and freshness/corrections model, with downstream schema and pipeline tasks sequenced to depend on them.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}
