@@ -1,0 +1,32 @@
+{
+  "id": "wqe-data-025",
+  "title": "Open public dataset export of normalized snapshots (with provenance)",
+  "project": "water-quality-explainers",
+  "type": "data",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["public-health", "water", "open-data"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "The normalized snapshots produced by the ingestion pipeline are themselves a public good — a clean, provenance-tracked, normalized view of open US drinking-water compliance data. Releasing them as an open dataset with full provenance enables reuse by researchers, journalists, and other public-interest applications. The export license must be compatible with source licenses: CC0 or CC-BY-4.0 for EPA/federal public-domain sources; ODbL for any OSM-derived geodata components. No individual-level or household-level data is included.",
+  "objective": "Produce and publish an open public dataset export of the normalized water-quality snapshots with full provenance: (1) snapshots include all citation metadata (publisher, dataset, URL, retrievedDate, sourceVintage, license, checksum); (2) export license compatible with source licenses (CC0 or CC-BY-4.0 for federal public-domain data; ODbL for any OSM-derived geodata); (3) no individual-level or household-level data included; (4) export is reproducible from the same source vintage + pipeline version.",
+  "acceptanceCriteria": [
+    "Exported dataset includes full provenance for each record: publisher, dataset, URL, retrievedDate, sourceVintage, sourceLicense, checksum",
+    "Export license compatible with all included source licenses (CC0 or CC-BY-4.0 for EPA/federal; ODbL for OSM-derived components)",
+    "No individual-level, household-level, or controlled-access data included in the export",
+    "Export is reproducible: same source vintage + pipeline version produces the same checksummed output",
+    "Export format and provenance documented in the repo"
+  ],
+  "resources": [
+    "https://echo.epa.gov/",
+    "https://www.waterqualitydata.us/",
+    "https://www.epa.gov/ground-water-and-drinking-water"
+  ],
+  "output": "Dataset: open public export of normalized water-quality snapshots with provenance in data/export/, with license and provenance documentation.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

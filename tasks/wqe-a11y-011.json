@@ -1,0 +1,32 @@
+{
+  "id": "wqe-a11y-011",
+  "title": "WCAG 2.2 AA + plain-language readability hardening (automated + manual AT audit)",
+  "project": "water-quality-explainers",
+  "type": "code",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["public-health", "water", "software", "accessibility"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "WCAG 2.2 AA and plain-language readability are hard gates for this project, not optional improvements. The intended beneficiaries include low-literacy readers, non-specialist caregivers, renters, and people for whom English is not a primary language — the populations most likely to be affected by water-quality issues and least likely to be served by technical regulatory documents. A beautiful explainer that leaves the reader with a false sense of certainty because they could not read it is a failure.",
+  "objective": "Harden the web app (built on wqe-web-006 and wqe-engine-008) to WCAG 2.2 AA: (1) run automated axe/pa11y scan with zero critical violations; (2) complete manual AT audit on the defined matrix (NVDA+Firefox, JAWS+Chrome, VoiceOver+Safari, TalkBack+Chrome, keyboard-only) and document findings; (3) meet and enforce a plain-language readability target in CI (Flesch-Kincaid or equivalent metric); (4) ensure explainer output meets both gates before M1 exit.",
+  "acceptanceCriteria": [
+    "Automated axe/pa11y scan passes with zero critical violations on all explainer and lookup pages",
+    "Manual AT audit completed on the defined matrix: NVDA+Firefox, JAWS+Chrome, VoiceOver+Safari, TalkBack+Chrome, and keyboard-only navigation",
+    "Manual AT audit findings documented and any blocking issues resolved before M1 exit",
+    "Plain-language readability target (Flesch-Kincaid or equivalent) met and enforced in CI; CI fails if target is not met",
+    "pnpm build && pnpm test && pnpm lint pass"
+  ],
+  "resources": [
+    "https://www.w3.org/TR/WCAG22/",
+    "https://github.com/dequelabs/axe-core",
+    "https://pa11y.org/"
+  ],
+  "output": "PR with a11y fixes, automated a11y test configuration (axe/pa11y in CI), plain-language readability CI check, and a manual AT audit report committed to the repo.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

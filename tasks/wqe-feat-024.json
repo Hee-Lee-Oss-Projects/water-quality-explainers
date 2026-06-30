@@ -1,0 +1,32 @@
+{
+  "id": "wqe-feat-024",
+  "title": "Offline/PWA mode for low-connectivity users",
+  "project": "water-quality-explainers",
+  "type": "code",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["public-health", "water", "software", "accessibility"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Low-connectivity users — including rural communities, low-income households, and users in areas with poor network coverage — are among the most likely to need water-quality information and least likely to have fast or reliable internet. A Progressive Web App (PWA) offline mode reuses the existing static build artifacts and service worker caching to enable offline access. No new tracking, telemetry, or data collection must be introduced; the privacy posture must be maintained or improved.",
+  "objective": "Add PWA offline mode to the static web app: (1) service worker that caches static artifacts (HTML, CSS, JS, pre-built explainers) for offline use; (2) reuses existing static build artifacts — no new data collection or tracking; (3) clear user indication when viewing cached/offline content with staleness information; (4) no tracking, telemetry, or PII collection introduced; (5) WCAG 2.2 AA maintained; (6) runtime egress E2E passes (no unexpected outbound requests in offline mode).",
+  "acceptanceCriteria": [
+    "PWA service worker caches static artifacts for offline use; previously viewed explainers accessible without network",
+    "Offline mode reuses existing static build artifacts; no new data collection, telemetry, or tracking introduced",
+    "UI clearly indicates when content is served from cache (offline) and shows staleness/snapshot date",
+    "Runtime network-interception E2E passes in offline mode (no unexpected outbound requests)",
+    "WCAG 2.2 AA maintained; zero critical axe violations",
+    "pnpm build && pnpm test && pnpm lint pass"
+  ],
+  "resources": [
+    "https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps",
+    "https://www.w3.org/TR/WCAG22/"
+  ],
+  "output": "PR adding PWA service worker and offline mode to the static web app.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

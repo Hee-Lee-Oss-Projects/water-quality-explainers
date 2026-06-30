@@ -1,0 +1,34 @@
+{
+  "id": "wqe-content-005",
+  "title": "Lead explainer template + lead contaminant entry, no-verdict + limitations, expert-signed-off",
+  "project": "water-quality-explainers",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["public-health", "water", "accessibility"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Lead is the highest-priority contaminant for this project because the risk to individuals is dominated by home plumbing and service lines — not captured in public water system monitoring data. This makes the 'system data does not equal your tap' caveat structurally critical and the single most important thing to communicate. The lead entry and explainer template also establish the workflow that all subsequent contaminant entries must follow: every claim traceable to a cited source, no safety verdict, explicit limitations, and expert sign-off by an approver distinct from the author.",
+  "objective": "Author the lead contaminant library entry and an explainer unit template that: (1) traces every figure and claim to EPA LCR/MCLG and WHO sources with retrieval dates; (2) contains no verbatim copying of copyrighted text; (3) includes the explicit 'system data does not equal your tap (home plumbing/service lines)' caveat; (4) carries a limitations section; (5) routes to 'where to get the official advisory'; (6) carries no safety verdict, grade, ranking, or product recommendation; (7) is reviewed and approved by an expert distinct from the author, with a PR-tied, append-only review-log entry recording reviewer, approver, credential, sources checked, and any source-divergence decision.",
+  "acceptanceCriteria": [
+    "Every figure and claim in the lead entry is traceable to a cited authoritative source (EPA LCR/MCLG, WHO) with retrieval date and license; no verbatim copying of copyrighted text",
+    "Entry contains an explicit 'system data does not equal your tap' caveat explaining home plumbing and service lines as the dominant lead source not captured in system data",
+    "Entry includes a limitations section and a 'where to get the official advisory' routing to the primacy agency and EPA",
+    "Entry carries no safety verdict, grade, ranking, or product recommendation",
+    "Entry is reviewed by a qualified expert (drinking-water / environmental-health / public-health professional or toxicologist) who is distinct from the author; reviewedBy != approvedBy",
+    "A PR-tied, append-only review-log entry is committed recording: PR number, commit SHA, content version, reviewer identity + credential, approver identity + credential, sources checked, and any source-divergence decision",
+    "The explainer unit template produced from this entry demonstrates the no-verdict + limitations framing for all subsequent entries"
+  ],
+  "resources": [
+    "https://www.epa.gov/ground-water-and-drinking-water/lead-and-copper-rule",
+    "https://www.epa.gov/lead/national-primary-drinking-water-regulations-lead-and-copper",
+    "https://www.who.int/publications/i/item/9789241549950"
+  ],
+  "output": "A document: the lead contaminant library entry (content/contaminants/lead.md or equivalent) and the explainer unit template, with the expert review-log entry committed to the repo.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

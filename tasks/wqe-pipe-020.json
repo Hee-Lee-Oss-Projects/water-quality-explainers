@@ -1,0 +1,32 @@
+{
+  "id": "wqe-pipe-020",
+  "title": "Extend coverage to >= 2 additional regions + scheduled re-ingest",
+  "project": "water-quality-explainers",
+  "type": "code",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["public-health", "water", "open-data", "software"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "M4 broadens geographic coverage beyond the initial pilot state to demonstrate the pipeline's scalability and to serve more partner communities. Each new state or region requires its own license verification before ingestion. Scheduled re-ingest with staleness flags must be operational. A real regulatory change (PFAS MCL updates, Lead and Copper Rule revision) must be exercised end-to-end to prove the regulatory-update re-review process works.",
+  "objective": "Extend coverage to >= 2 additional regions beyond the M2 pilot state: (1) verify and register licenses for any new state primacy-agency data before ingestion; (2) ingest and normalize data for >= 2 additional regions with refreshed, checksummed snapshots; (3) operationalize scheduled re-ingest with staleness flags; (4) exercise a real regulatory change re-review end-to-end (PFAS/LCR or equivalent) and document the outcome.",
+  "acceptanceCriteria": [
+    "At least 2 additional regions (beyond the M2 pilot state) ingested with refreshed checksummed snapshots passing CI reconciliation",
+    "License verified and registered in the source registry for each new region's state primacy-agency data before ingestion",
+    "Scheduled re-ingest operational with staleness flags surfaced in UI and coverage reports",
+    "A real regulatory change re-review exercised end-to-end: rule change identified, content updated, expert re-signed, erratum logged",
+    "pnpm build && pnpm test && pnpm lint pass"
+  ],
+  "resources": [
+    "https://echo.epa.gov/",
+    "https://www.waterqualitydata.us/",
+    "https://www.epa.gov/pfas/pfas-national-primary-drinking-water-regulation"
+  ],
+  "output": "PR adding ingestion for >= 2 additional regions, scheduled re-ingest configuration, and a documented regulatory-change re-review exercise.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "wqe-data-015",
+  "title": "Service-area / geocoding using open data only (Census/TIGER PD; OSM ODbL attribution)",
+  "project": "water-quality-explainers",
+  "type": "data",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["public-health", "water", "open-data"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Helping a user find their water system requires geocoding an address or location to a public water system service area. This must use only open/public-domain/ODbL-licensed sources: US Census/TIGER for boundary data (public domain) and OSM/Nominatim for address lookup (ODbL, requiring share-alike attribution). Derived geodata that incorporates OSM must be licensed ODbL. Geocoding maps to water system (pwsId), never to a person — precise user geolocation is never stored. The ADR (wqe-arch-001) must be consulted for the agreed geocoding approach.",
+  "objective": "Build the service-area/geocoding dataset and lookup module using only open/PD/ODbL data: (1) US Census/TIGER shapefiles for service-area boundaries (public domain); (2) OSM/Nominatim for address-to-coordinate lookup (ODbL, with attribution and share-alike honored); (3) derived geodata that incorporates OSM data licensed ODbL; (4) geocoding result maps to water system pwsId, never to an individual person; (5) precise user geolocation is never stored or logged; (6) ODbL attribution obligations documented and surfaced in the app.",
+  "acceptanceCriteria": [
+    "Uses only open/PD/ODbL sources; no proprietary geocoding APIs (no Google Maps, MapBox paid tier, or similar)",
+    "ODbL attribution and share-alike obligations honored: any derived geodata incorporating OSM data is licensed ODbL",
+    "Attribution to Census/TIGER (public domain) and OSM/Nominatim (ODbL) documented in the repo and surfaced in the app",
+    "Geocoding maps to water system (pwsId), not to an individual person",
+    "Precise user geolocation is never stored, logged, or transmitted beyond the immediate lookup request",
+    "Geocoding approach follows the ADR (wqe-arch-001) decision"
+  ],
+  "resources": [
+    "https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html",
+    "https://www.openstreetmap.org/copyright",
+    "https://nominatim.org/",
+    "https://www.epa.gov/ground-water-and-drinking-water/safe-drinking-water-act-sdwa-compliance-data"
+  ],
+  "output": "Dataset: service-area geodata (data/geocoding/) built from Census/TIGER and OSM/Nominatim, with attribution, license documentation, and a geocoding lookup module in the pipeline.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "ODbL-1.0"
+}

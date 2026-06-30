@@ -1,0 +1,33 @@
+{
+  "id": "wqe-i18n-017",
+  "title": "i18n framework + completeness check + first non-English locale (UI + core explainers), accuracy-reviewed",
+  "project": "water-quality-explainers",
+  "type": "code",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["public-health", "water", "software", "accessibility", "i18n"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "translation",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "Multilingual access is a hard requirement for reaching the target beneficiaries. A critical failure mode is health or safety text that is blank or broken in a non-English locale — the fallback must always render English rather than leaving a gap. Translation accuracy for health and regulatory meaning (not just fluency) is mandatory; a fluent but technically wrong translation of an MCL or a violation type can cause the same harms as an inaccurate English explainer. Expert escalation for health content applies to translations as well.",
+  "objective": "Implement the i18n framework and first non-English locale (provisionally Spanish, or partner-determined): (1) externalize all user-facing strings; (2) build-time completeness check that fails CI on missing translations; (3) safe fallback to English — health/safety text is never blank or broken in a non-English locale; (4) >= 1 non-English locale for all UI strings and core explainer templates; (5) translations accuracy-reviewed for health/regulatory meaning (not just fluency); (6) expert escalation applied to health content translations; (7) derivative content licensed CC-BY-4.0.",
+  "acceptanceCriteria": [
+    "All user-facing strings externalized to locale files; no hardcoded English strings in templates",
+    "Build-time completeness check fails CI if any key in the non-English locale is missing",
+    "Safe fallback to English is enforced — health/safety text is never blank, broken, or silent in any locale",
+    "At least 1 non-English locale ships for all UI strings and core explainer templates",
+    "Translations accuracy-reviewed for health and regulatory meaning by a competent speaker with technical re-check; expert escalation for health content",
+    "Derivative translated content licensed CC-BY-4.0",
+    "pnpm build && pnpm test && pnpm lint pass"
+  ],
+  "resources": [
+    "https://www.w3.org/TR/WCAG22/",
+    "https://www.epa.gov/dwreginfo/drinking-water-regulations"
+  ],
+  "output": "PR adding i18n framework (string externalization, build-time completeness check, English fallback) and >= 1 non-English locale for UI + core explainers with accuracy review documented.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

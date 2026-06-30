@@ -1,0 +1,33 @@
+{
+  "id": "wqe-web-006",
+  "title": "Static web skeleton + privacy CI gates (no telemetry, no search logging, CSP + runtime egress E2E)",
+  "project": "water-quality-explainers",
+  "type": "code",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["public-health", "water", "software", "accessibility"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "User water-system queries reveal location and a health concern and must never be logged. The web app is static-first — no app server, so no server-side query log is architecturally possible by design. Privacy must be enforced at three layers: a strict Content Security Policy, a runtime network-interception E2E test that fails on any unexpected outbound request, and a static CI audit (no analytics, no trackers, no PII fields, no server-side search log). A grep alone does not constitute passing privacy CI.",
+  "objective": "Build the static web skeleton (app/) that: (1) loads without errors in a browser; (2) passes TypeScript/ESM lint and build; (3) enforces strict CSP with locked connect-src, script-src, img-src, and font-src 'self'; (4) passes a runtime network-interception E2E test (Playwright or equivalent) that fails on any unexpected outbound request; (5) passes a static CI audit confirming no analytics, no trackers, no PII fields, and no server-side search log; (6) has no telemetry and no third-party scripts; (7) meets initial WCAG 2.2 AA structure requirements.",
+  "acceptanceCriteria": [
+    "Static site loads in a browser without errors",
+    "No analytics, trackers, third-party scripts, or PII fields present — verified by static CI audit (not grep alone)",
+    "No server-side search log is possible by design (static hosting, no backend)",
+    "CSP is locked: connect-src, script-src, img-src, and font-src 'self' enforced",
+    "Runtime network-interception E2E test (Playwright) fails the build on any unexpected outbound request during any user flow",
+    "TypeScript, ESM; pnpm build && pnpm test && pnpm lint pass"
+  ],
+  "resources": [
+    "https://www.w3.org/TR/WCAG22/",
+    "https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP",
+    "https://playwright.dev/"
+  ],
+  "output": "PR adding app/ (static site skeleton, no-telemetry/no-PII), CI configs for CSP + runtime egress E2E and static audit; pnpm build && pnpm test && pnpm lint pass.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

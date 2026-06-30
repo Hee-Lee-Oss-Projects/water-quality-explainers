@@ -1,0 +1,32 @@
+{
+  "id": "wqe-ops-028",
+  "title": "Dependency/supply-chain audit + SRI hardening",
+  "project": "water-quality-explainers",
+  "type": "maintenance",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["public-health", "water", "software"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "A static site with no backend has a small attack surface, but supply-chain risk in npm dependencies and third-party subresource integrity are the principal concerns. This recurring maintenance task audits npm dependencies for known vulnerabilities, ensures the pnpm lockfile is pinned and up to date, minimizes dependency count, and hardens any external resource loading with Subresource Integrity (SRI) where applicable. No secrets or API keys should appear in any dependency or build output.",
+  "objective": "Perform a dependency/supply-chain audit and apply SRI hardening: (1) audit all npm dependencies for known CVEs using npm audit or equivalent; (2) verify the pnpm lockfile is pinned and up to date; (3) identify and remove unnecessary dependencies; (4) apply Subresource Integrity (SRI) hashes to any externally loaded resources; (5) verify no secrets or API keys appear in any dependency or build output; (6) document findings and remediation.",
+  "acceptanceCriteria": [
+    "npm audit (or equivalent) passes with no critical or high CVEs unmitigated",
+    "pnpm lockfile is pinned and up to date; no unpinned dependency ranges",
+    "Unnecessary dependencies identified and removed where feasible",
+    "SRI hashes applied to any externally loaded resources",
+    "No secrets or API keys found in any dependency or build output",
+    "pnpm build && pnpm test && pnpm lint pass"
+  ],
+  "resources": [
+    "https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity",
+    "https://pnpm.io/cli/audit"
+  ],
+  "output": "PR with dependency audit findings remediated, unnecessary deps removed, SRI hashes applied, and a brief audit report committed.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

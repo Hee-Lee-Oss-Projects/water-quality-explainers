@@ -1,0 +1,33 @@
+{
+  "id": "wqe-web-013",
+  "title": "Privacy-preserving lookup/search (client-side index; no query logging; no precise-geolocation storage)",
+  "project": "water-quality-explainers",
+  "type": "code",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["public-health", "water", "software", "accessibility"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "A water-system query reveals a person's location and a potential health concern. These queries are treated as sensitive and must never be logged server-side, stored, or sent to a third party. The lookup must function via a client-side index where feasible — so there is no server to log the query — and must work without collecting or storing the user's precise geolocation. The runtime egress E2E test from wqe-web-006 must extend to all lookup flows.",
+  "objective": "Implement privacy-preserving water-system lookup/search in the web app: (1) client-side index or pre-rendered lookup so no query reaches a server; (2) no server-side query log (architecturally impossible with static hosting); (3) no third-party calls during lookup — verified by extending the runtime network-interception E2E to cover all lookup flows; (4) precise user geolocation is never stored or transmitted; (5) lookup is accessible: keyboard-navigable, screen-reader labeled, meets WCAG 2.2 AA contrast; (6) zero critical axe violations on lookup pages.",
+  "acceptanceCriteria": [
+    "Lookup works with no server-side query log; queries do not leave the client during normal operation",
+    "No third-party calls during any lookup flow — verified by runtime network-interception E2E test covering all lookup interactions",
+    "Precise user geolocation is never stored, transmitted, or logged",
+    "Lookup is keyboard-navigable and screen-reader labeled; WCAG 2.2 AA contrast on all lookup elements",
+    "Zero critical axe violations on lookup and search pages",
+    "pnpm build && pnpm test && pnpm lint pass"
+  ],
+  "resources": [
+    "https://www.w3.org/TR/WCAG22/",
+    "https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP",
+    "https://playwright.dev/"
+  ],
+  "output": "PR adding client-side search/lookup to the web app with runtime egress E2E test covering all lookup flows and a11y verification on lookup pages.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

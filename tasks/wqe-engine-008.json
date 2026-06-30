@@ -1,0 +1,32 @@
+{
+  "id": "wqe-engine-008",
+  "title": "Deterministic explainer-generation engine (no-verdict; limitations + violation-context logic)",
+  "project": "water-quality-explainers",
+  "type": "code",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["public-health", "water", "software"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "The explainer engine is the core of the project. It must generate per-system, plain-language explainers deterministically from a snapshot and the expert-reviewed contaminant library. Getting the no-verdict constraint wrong in either direction is harmful: false reassurance can expose a family to lead or nitrate; false alarm causes panic and erodes trust in compliant water systems. The engine must be explicitly tested to emit no safety verdict, grade, ranking, or product recommendation, and must always include the limitations section and the route to the jurisdiction's official advisory.",
+  "objective": "Implement the deterministic explainer-generation engine (pipeline/explain/) that: (1) produces identical output given the same snapshot + library inputs (determinism test required); (2) never emits a safety verdict, grade, ranking, or product recommendation (tested by automated assertions); (3) includes the limitations section and 'not a substitute for official advisories' framing on every generated explainer; (4) distinguishes health-based vs. monitoring/reporting violations in plain language; (5) states what the data does and does not cover (home plumbing, private wells, sampling gaps, detection limits, reporting lag); (6) routes the user to the jurisdiction's official advisory (primacy agency).",
+  "acceptanceCriteria": [
+    "Engine produces identical output for the same snapshot + library inputs (determinism verified by test)",
+    "Automated tests assert that no safety verdict, grade, ranking, or product recommendation appears in any generated explainer",
+    "Every generated explainer includes the limitations section and 'not a substitute for official advisories' text with a direct route to the jurisdiction's advisory",
+    "Engine distinguishes health-based vs. monitoring/reporting violations in plain-language output",
+    "Engine output states what the data does not cover: home plumbing/service lines (lead), private wells, sampling cadence, detection limits, reporting lag between sampling and publication",
+    "pnpm build && pnpm test && pnpm lint pass"
+  ],
+  "resources": [
+    "https://www.epa.gov/ground-water-and-drinking-water",
+    "https://www.epa.gov/dwreginfo/drinking-water-regulations"
+  ],
+  "output": "PR adding pipeline/explain/ engine with determinism tests and tests that verify no verdict, grade, ranking, or recommendation is emitted in any generated explainer.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

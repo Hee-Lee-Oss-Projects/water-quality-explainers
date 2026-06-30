@@ -1,0 +1,32 @@
+{
+  "id": "wqe-i18n-022",
+  "title": "Second non-English locale (UI + core explainers), accuracy-reviewed",
+  "project": "water-quality-explainers",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["public-health", "water", "accessibility", "i18n"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "translation",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "The M4 definition of done requires >= 2 non-English locales (UI + core explainers) accuracy-reviewed. The second locale should be partner-driven, reflecting the priority languages of the communities served. Translation accuracy for health/regulatory meaning is mandatory — a fluent but technically wrong translation of an MCL or violation type can cause the same harms as an inaccurate English explainer. Expert escalation applies to health content translations.",
+  "objective": "Produce and ship a second non-English locale (partner-determined language) for all UI strings and core explainer templates: (1) building on the i18n framework from wqe-i18n-017; (2) accuracy-reviewed for health/regulatory meaning by a competent speaker, not just fluency; (3) expert escalation for health content; (4) build-time completeness check passes; (5) safe fallback to English enforced; (6) licensed CC-BY-4.0.",
+  "acceptanceCriteria": [
+    "Second non-English locale covers all UI strings and core explainer templates",
+    "Build-time completeness check passes with no missing translation keys",
+    "Safe fallback to English enforced; no blank or broken health/safety text in the new locale",
+    "Translations accuracy-reviewed for health and regulatory meaning by a competent speaker; expert escalation for health content",
+    "Derivative translated content licensed CC-BY-4.0",
+    "pnpm build && pnpm test && pnpm lint pass"
+  ],
+  "resources": [
+    "https://www.epa.gov/dwreginfo/drinking-water-regulations",
+    "https://www.w3.org/TR/WCAG22/"
+  ],
+  "output": "Translation: second non-English locale locale files for UI + core explainers, with accuracy review documented.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

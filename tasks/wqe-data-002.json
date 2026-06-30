@@ -1,0 +1,36 @@
+{
+  "id": "wqe-data-002",
+  "title": "Source registry + CI license/provenance gate (open/PD/CC only; reject unverified)",
+  "project": "water-quality-explainers",
+  "type": "data",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["public-health", "water", "open-data", "software"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "water-quality-explainers must ingest only open, public-domain, or openly-licensed data. The source registry is the enforcement point: a declarative, machine-readable list of approved datasets with verified licenses. The CI license gate blocks ingestion from any unregistered or unverified source, preventing license contamination and ensuring reproducible provenance from the first commit. Proprietary aggregators (e.g. EWG Tap Water Database) and CCR-PDF text copying are explicitly excluded. WHO entries require paraphrase+cite (NC terms); OSM/Nominatim entries require ODbL share-alike + attribution.",
+  "objective": "Build a declarative source registry (data/sources/) and a CI license/provenance gate that: (1) records publisher, dataset/API URL, license/terms, license-verification note + date, and allowed-use for each approved source; (2) fails CI on any ingestion attempt from an unregistered source or one with an unverified or incompatible license; (3) marks WHO entries as NC (paraphrase+cite only); (4) marks OSM/Nominatim entries with ODbL share-alike + attribution flags; (5) explicitly rejects proprietary aggregators and CCR-PDF text copying by policy and by test.",
+  "acceptanceCriteria": [
+    "Declarative registry file exists; each source records publisher, dataset/API URL, license/terms, license-verification note + date, and allowed-use",
+    "CI fails when an ingestion step references a source not present in the registry",
+    "CI fails when a registered source has an unverified or incompatible license (proprietary, subscription, or unknown)",
+    "WHO entries are marked NC; any use of WHO content is paraphrase+cite only and never verbatim-copied or relicensed as CC-BY",
+    "OSM/Nominatim entries carry ODbL share-alike and attribution flags visible in CI output",
+    "A test or CI job explicitly rejects a proprietary aggregator and CCR-PDF text copying as invalid source entries",
+    "pnpm build && pnpm test && pnpm lint pass"
+  ],
+  "resources": [
+    "https://echo.epa.gov/",
+    "https://www.waterqualitydata.us/",
+    "https://www.epa.gov/ground-water-and-drinking-water",
+    "https://www.who.int/publications/i/item/9789241549950",
+    "https://www.openstreetmap.org/copyright"
+  ],
+  "output": "Declarative source registry (YAML or JSON) in data/sources/, a CI script or GitHub Actions step that validates each ingestion step against the registry, and tests confirming CI fails on an unregistered or unverified source.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

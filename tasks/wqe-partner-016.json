@@ -1,0 +1,32 @@
+{
+  "id": "wqe-partner-016",
+  "title": "Secure named partner (public-health dept / water-justice org): need, geography, languages, endorsement",
+  "project": "water-quality-explainers",
+  "type": "research",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["public-health", "water", "community"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "The Elyos Definition of Shipped requires that a named partner organization confirms the need in writing and endorses or adopts the project for their community's geography and languages. Without this, water-quality-explainers can be 'publicly usable' but not 'shipped' by the project's own standard. All Task JSON files currently carry verifiedNeed: false and requestor: 'TBD' because no partner is secured. This task is the gating human-decision task for M3 and the overall project Definition of Shipped.",
+  "objective": "Identify, engage, and secure a named partner organization (public-health department, water-justice nonprofit, environmental-justice org, or community organization) that: (1) confirms the need in writing (letter of support or lightweight MOU); (2) identifies priority geography (region/state), priority water systems, and priority languages; (3) endorses and adopts the project for their community. On success, update verifiedNeed to true and requestor to the named org across all relevant task files.",
+  "acceptanceCriteria": [
+    "A named partner organization identified and engaged",
+    "Partner confirms need in writing: a letter of support, lightweight MOU, or equivalent written commitment",
+    "Partner identifies priority geography (specific region or state), water systems, and languages",
+    "Written commitment committed to the repo (or referenced securely if confidential)",
+    "verifiedNeed is updated to true and requestor is set to the named organization across relevant task files on success"
+  ],
+  "resources": [
+    "https://www.epa.gov/environmental-justice",
+    "https://www.nrdc.org/issues/clean-water",
+    "https://www.cdc.gov/nceh/ehs/water/index.html"
+  ],
+  "output": "Document: partner engagement record including the letter of support or MOU, the partner's priority geography/systems/languages, and the task registry update (verifiedNeed: true, requestor: named org).",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

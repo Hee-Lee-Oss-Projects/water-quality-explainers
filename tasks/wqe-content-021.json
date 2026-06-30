@@ -1,0 +1,32 @@
+{
+  "id": "wqe-content-021",
+  "title": "Expand contaminant library (radionuclides, chromium-6, DBP subspecies), expert-reviewed",
+  "project": "water-quality-explainers",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["public-health", "water", "accessibility"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "After the core 8-contaminant library is established in M1, M4 expands coverage to additional regulated contaminants with evolving regulatory status. Radionuclides, chromium-6, and disinfection byproduct subspecies are significant in some communities and have regulatory-evolution histories that must be flagged for re-review. All new entries must follow the same expert-review, no-verdict, and no-self-approval workflow as the core library.",
+  "objective": "Expand the contaminant library with entries for radionuclides (combined radium, gross alpha/beta, uranium), chromium-6 (hexavalent chromium), and additional disinfection byproduct subspecies beyond TTHM and HAA5, each: (1) plain-language and sourced to EPA/WHO with retrieval dates; (2) carrying no verdict; (3) flagging any regulatory-evolution items for re-review; (4) expert-signed-off by an approver distinct from the author with a PR-tied review-log entry.",
+  "acceptanceCriteria": [
+    "New entries added for radionuclides (combined radium, gross alpha/beta, uranium), chromium-6, and additional DBP subspecies",
+    "Every figure and claim sourced to EPA/WHO with retrieval dates and license; no verbatim copying",
+    "Every new entry carries no safety verdict, grade, ranking, or product recommendation",
+    "Regulatory-evolution items (pending/recent rule changes) flagged for re-review with a named owner",
+    "Every entry expert-signed-off by a qualified approver distinct from the author; PR-tied review-log entry committed for each"
+  ],
+  "resources": [
+    "https://www.epa.gov/dwreginfo/drinking-water-regulations",
+    "https://www.epa.gov/radionuclides/radionuclides-drinking-water",
+    "https://www.who.int/publications/i/item/9789241549950"
+  ],
+  "output": "Document: expanded contaminant library entries in content/contaminants/ with expert review-log entries for each new entry.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "wqe-pipe-007",
+  "title": "Core-contaminant normalization (lead, copper, nitrate, arsenic, coliform/E. coli, TTHM/HAA5, PFAS) + non-detect/detection-limit handling",
+  "project": "water-quality-explainers",
+  "type": "code",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["public-health", "water", "open-data", "software"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "Accurate normalization of core regulated contaminants is the technical foundation of the explainer engine. Non-detect-as-zero is a common and harmful error in water data: a non-detect at a given reporting limit carries different meaning than a measured zero. Violation taxonomy (health-based vs. monitoring/reporting vs. treatment-technique) is critical to prevent a paperwork violation from being misread as a contamination event. The 2024 PFAS MCLs and the evolving Lead and Copper Rule are regulatory-change triggers that must be flagged for re-review.",
+  "objective": "Implement normalization for all core regulated contaminants (lead, copper, nitrate, arsenic, total coliform/E. coli, TTHM/HAA5, PFAS) in pipeline/normalize/: (1) map each to a stable identity (CAS/EPA contaminant code); (2) harmonize units to a normalized form while preserving the original; (3) record the MCL and MCLG for each; (4) preserve non-detect as non-detect with the detection/reporting limit (not as zero); (5) classify violations by the taxonomy (health-based/monitoring-reporting/treatment-technique); (6) preserve resolved vs. open violation status; (7) retain sample periods distinct from publication dates; (8) flag 2024 PFAS MCLs and Lead and Copper Rule values for regulatory re-review.",
+  "acceptanceCriteria": [
+    "Each contaminant normalized to a stable identity (CAS/EPA code) with harmonized units; original unit preserved",
+    "MCL and MCLG recorded for each core contaminant; sourced to EPA regulatory reference",
+    "Non-detect is preserved as non-detect (not zero) with the detection/reporting limit; unit tests cover non-detect handling for all core contaminants",
+    "Violations classified by taxonomy: health-based, monitoring/reporting, treatment-technique; resolved vs. open status preserved",
+    "Sample periods retained distinct from publication dates in the normalized schema",
+    "2024 PFAS MCLs and Lead and Copper Rule values flagged in the codebase as regulatory re-review triggers",
+    "pnpm build && pnpm test && pnpm lint pass"
+  ],
+  "resources": [
+    "https://www.epa.gov/dwreginfo/drinking-water-regulations",
+    "https://www.epa.gov/pfas/pfas-national-primary-drinking-water-regulation",
+    "https://www.epa.gov/ground-water-and-drinking-water/lead-and-copper-rule"
+  ],
+  "output": "PR adding pipeline/normalize/ modules for all core contaminants with unit tests for non-detect handling, violation taxonomy, and identity harmonization.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

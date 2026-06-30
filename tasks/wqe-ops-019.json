@@ -1,0 +1,31 @@
+{
+  "id": "wqe-ops-019",
+  "title": "Outcomes tracking (partner self-report) + re-review/freshness cadence + regulatory-update process",
+  "project": "water-quality-explainers",
+  "type": "maintenance",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["public-health", "water", "community"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "Because the project collects no telemetry, outcomes are tracked via partner self-report using a standard template. The re-review cadence and regulatory-update process are critical for a medium-risk public-health project: the 2024 PFAS MCLs and the evolving Lead and Copper Rule are explicit re-review triggers. This task operationalizes the ongoing maintenance processes that keep the project honest and accurate after the M3 launch.",
+  "objective": "Design and document the ongoing operations processes: (1) privacy-preserving outcomes tracking via partner self-report using a standard template (distinct users, de-dup, flagged estimates; no in-app telemetry); (2) content re-review cadence with a named owner; (3) regulatory-update trigger process for PFAS/LCR and any future rule changes, with a named owner and a tested end-to-end workflow; (4) data freshness re-ingest cadence and staleness escalation process.",
+  "acceptanceCriteria": [
+    "Partner self-report template documented: partner, period, channels, distinct users (confirmed), flagged estimates, region/languages, de-dup notes, outcomes note",
+    "Re-review cadence documented with a named owner and schedule",
+    "Regulatory-update trigger process documented for PFAS/LCR rule changes: how a new rule triggers a content re-review, who owns it, how it is tracked",
+    "Data freshness re-ingest cadence and staleness escalation documented",
+    "No in-app telemetry; outcomes are partner-reported only, not measured in-app"
+  ],
+  "resources": [
+    "https://www.epa.gov/pfas/pfas-national-primary-drinking-water-regulation",
+    "https://www.epa.gov/ground-water-and-drinking-water/lead-and-copper-rule"
+  ],
+  "output": "Document: outcomes tracking template, re-review cadence, regulatory-update trigger process, and freshness cadence committed to the repo.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}
