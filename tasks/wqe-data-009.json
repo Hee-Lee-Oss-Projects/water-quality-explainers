@@ -1,0 +1,32 @@
+{
+  "id": "wqe-data-009",
+  "title": "Data-accuracy reconciliation + provenance-completeness suite (staleness flags, unit/identity checks)",
+  "project": "water-quality-explainers",
+  "type": "code",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["public-health", "water", "open-data", "software"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "A wrong water-safety figure drives real-world action. The data-accuracy reconciliation suite and provenance-completeness gate are the CI enforcement points for two project-critical invariants: every published figure must reconcile to its cited snapshot, and every published figure must carry a complete citation. Stale data must be surfaced honestly with staleness flags, never silently corrected or hidden. Unit and contaminant-identity mismatches (e.g., ppb vs. mg/L confusion, mislabeled contaminants) are a common class of water-data error and must be caught before publication.",
+  "objective": "Implement the CI data-accuracy reconciliation suite and provenance-completeness gate (pipeline/ or ci/): (1) fail CI if any published figure does not reconcile to its cited snapshot (value, unit, contaminant identity, sample period); (2) fail CI if any published figure lacks a complete citation (publisher, dataset, URL, retrievedDate, sourceVintage, license, checksum); (3) unit and contaminant-identity sanity checks across the normalized dataset; (4) staleness flags on results/violations based on sample period + snapshot date, surfaced honestly in explainer output.",
+  "acceptanceCriteria": [
+    "CI fails if any published figure does not reconcile to the value in its cited snapshot (matching value, unit, contaminant identity, and sample period)",
+    "CI fails if any published figure lacks any required Citation field (publisher, dataset, url, retrievedDate, sourceVintage, sourceLicense, checksum)",
+    "Unit sanity checks catch mismatches (e.g., ppb vs. mg/L confusion) before merge",
+    "Contaminant-identity checks catch mislabeled or unmapped contaminants before merge",
+    "Staleness flags are generated based on sample period + snapshot date and are surfaced in explainer output, not hidden",
+    "pnpm build && pnpm test && pnpm lint pass"
+  ],
+  "resources": [
+    "https://www.epa.gov/ground-water-and-drinking-water",
+    "https://echo.epa.gov/"
+  ],
+  "output": "PR adding CI reconciliation and provenance-completeness gate scripts/tests; CI workflow configuration ensuring all published figures are reconciled and fully cited.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "wqe-ops-029",
+  "title": "Annual content re-validation vs. updated EPA/WHO guidance",
+  "project": "water-quality-explainers",
+  "type": "maintenance",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["public-health", "water"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Drinking-water regulations change. The 2024 PFAS MCLs represent a major rule change that required contaminant library updates. The Lead and Copper Rule is under ongoing revision. WHO Guidelines for Drinking-water Quality are updated periodically. Any contaminant entry that references a superseded limit or cites an outdated source is a content accuracy failure. This recurring annual maintenance task re-validates all contaminant library entries against the current EPA and WHO guidance, flags any drift, and triggers expert re-review where needed.",
+  "objective": "Re-validate all published contaminant library entries against the current EPA regulatory reference (MCL/MCLG tables, Lead and Copper Rule, PFAS NPDWR) and current WHO Guidelines: (1) check each entry's cited limits against current EPA/WHO values; (2) flag any drift between the published entry and the current regulatory value; (3) trigger expert re-review for any entry with a changed limit or updated guidance; (4) update retrieval dates; (5) record findings in the re-validation log with a named reviewer.",
+  "acceptanceCriteria": [
+    "All published contaminant library entries checked against current EPA MCL/MCLG tables and WHO Guidelines",
+    "Any entry where a cited limit differs from the current regulatory value is flagged and triggering expert re-review",
+    "Expert re-review completed for all flagged entries; entries updated and re-approved by an approver distinct from the author",
+    "Retrieval dates updated for all entries checked",
+    "Re-validation findings recorded in an append-only re-validation log with reviewer name and date"
+  ],
+  "resources": [
+    "https://www.epa.gov/dwreginfo/drinking-water-regulations",
+    "https://www.epa.gov/pfas/pfas-national-primary-drinking-water-regulation",
+    "https://www.epa.gov/ground-water-and-drinking-water/lead-and-copper-rule",
+    "https://www.who.int/publications/i/item/9789241549950"
+  ],
+  "output": "Document: annual content re-validation report with findings, drift flags, expert re-review records, and updated contaminant library entries.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

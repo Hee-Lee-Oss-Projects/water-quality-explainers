@@ -1,0 +1,33 @@
+{
+  "id": "wqe-content-014",
+  "title": "Private-well guidance module (unregulated; 'no one tests this unless you do'; not advice)",
+  "project": "water-quality-explainers",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["public-health", "water", "accessibility"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Private wells serve an estimated 43 million Americans and are not covered by the Safe Drinking Water Act. No agency tests private wells by default — owners bear full responsibility but frequently do not know this. This is an underserved population distinct from public water system users. The guidance module must communicate the regulatory status clearly and honestly, link to official testing and lab resources, and provide no lab-result interpretation, individual advice, or safety verdict. Expert sign-off is required as with all health-related content.",
+  "objective": "Author the private-well guidance module (content/well-guidance/) that: (1) states clearly that private wells are not covered by drinking-water regulations and are not tested by any agency by default; (2) links to official testing resources and certified labs; (3) provides no lab-result interpretation for individual households; (4) provides no individual health advice; (5) carries no safety verdict; (6) distinguishes itself clearly from the public water system explainers so a private-well owner is not confused about their regulatory status; (7) is expert-signed-off by an approver distinct from the author with a PR-tied review-log entry.",
+  "acceptanceCriteria": [
+    "Module states clearly that private wells are not covered by federal/state drinking-water regulations and are not tested by any agency by default",
+    "Module links to official testing resources and certified lab directories (e.g. EPA, state health departments)",
+    "Module provides no lab-result interpretation for specific households and no individual health advice",
+    "Module carries no safety verdict, grade, or product recommendation",
+    "Module clearly distinguishes private wells from public water systems so users understand their regulatory context",
+    "Expert-signed-off by a qualified approver (distinct from author); PR-tied review-log entry committed"
+  ],
+  "resources": [
+    "https://www.epa.gov/privatewells",
+    "https://www.epa.gov/sites/default/files/2015-10/documents/2012_household_water_treatment.pdf",
+    "https://www.cdc.gov/healthywater/drinking/private/wells/index.html"
+  ],
+  "output": "Document: private-well guidance module (content/well-guidance/) with expert review-log entry committed to the repo.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

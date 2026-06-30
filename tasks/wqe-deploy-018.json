@@ -1,0 +1,32 @@
+{
+  "id": "wqe-deploy-018",
+  "title": "Production deploy + freshness automation + corrections/erratum process + disclaimers/branding",
+  "project": "water-quality-explainers",
+  "type": "code",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["public-health", "water", "software"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Production deploy is the M3 milestone exit and the penultimate step before Definition of Shipped. Water-quality data changes as violations open and resolve and as regulatory rules are updated. The corrections/erratum workflow is critical: a wrong published figure can drive real-world action, so there must be a documented, tested process to purge/replace a wrong figure and log the correction. Prominent and persistent 'not a substitute for official advisories' framing must be present on every page.",
+  "objective": "Deploy the production static build and operationalize freshness + corrections: (1) static production build served over HTTPS from a static host (no app server); (2) automated freshness: scheduled snapshot refresh with snapshot dates + staleness flags surfaced to users; (3) corrections/erratum workflow that can purge/replace a wrong published figure and log the correction in an append-only erratum record; (4) prominent persistent 'not a substitute for official advisories' + 'not an official agency product unless endorsed' disclaimers on every page; (5) no agency logos reused; (6) neutral, non-partisan framing verified.",
+  "acceptanceCriteria": [
+    "Static production build deployed over HTTPS; no app server; no server-side query log possible by design",
+    "Automated freshness: snapshot refresh is scheduled; snapshot dates and staleness flags are surfaced in the UI",
+    "Corrections/erratum workflow documented and tested: a wrong published figure can be purged, replaced, and logged in an append-only erratum record",
+    "Every page carries prominent persistent 'not a substitute for official advisories' and 'not an official agency product unless endorsed' disclaimers",
+    "No agency logos or official agency branding reused",
+    "pnpm build && pnpm test && pnpm lint pass"
+  ],
+  "resources": [
+    "https://pages.github.com/",
+    "https://www.epa.gov/ground-water-and-drinking-water"
+  ],
+  "output": "PR with production deploy configuration, freshness automation, corrections/erratum workflow, and disclaimer/branding review.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "wqe-pipe-004",
+  "title": "Pilot ingestion: EPA ECHO/SDWIS for one small region — provenance-stamped, checksummed snapshot",
+  "project": "water-quality-explainers",
+  "type": "code",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["public-health", "water", "open-data", "software"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "The pilot ingestion is the first end-to-end test of the source-registry gate, normalized schema, and snapshot reproducibility before broader coverage is attempted. It targets one small region using EPA ECHO/SDWIS (US federal public-domain data), which is the primary compliance and violation database for the Safe Drinking Water Act. Any API key required is a CI/pipeline secret only — never written to logs, snapshots, or commits. The adapter must be read-only and snapshot raw responses before any transform so the raw→normalized pipeline is auditable.",
+  "objective": "Implement a read-only ingestion adapter for EPA ECHO/SDWIS covering one small pilot region that: (1) passes the source-registry/license gate; (2) snapshots raw API responses with retrieval metadata before any transform; (3) normalizes raw data to the wqe-data-003 schema deterministically (same source vintage + pipeline version yields same snapshot checksum); (4) produces a provenance-stamped, checksummed snapshot that reconciles to source in CI; (5) uses any API key only via CI/pipeline secrets, never writing it to logs, snapshots, or commits.",
+  "acceptanceCriteria": [
+    "Read-only adapter snapshots raw EPA ECHO/SDWIS responses with retrieval metadata (URL, timestamp, HTTP status) before any transform",
+    "Raw-to-normalized transform is deterministic: same source vintage + same pipeline version produces the same snapshot checksum",
+    "Output snapshot reconciles to the source data in a CI job; any reconciliation failure blocks merge",
+    "Adapter passes the source-registry license gate; EPA SDWIS is registered with public-domain license and verification note",
+    "Any API key is accessed only via CI/pipeline secret store; no key appears in logs, snapshot files, or committed code",
+    "pnpm build && pnpm test && pnpm lint pass"
+  ],
+  "resources": [
+    "https://echo.epa.gov/",
+    "https://www.epa.gov/enviro/sdwis-overview",
+    "https://www.epa.gov/ground-water-and-drinking-water"
+  ],
+  "output": "PR adding pipeline/adapters/epa-echo/ adapter, a pilot snapshot artifact with provenance metadata, CI reconciliation test, and CI pipeline configuration.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

@@ -261,6 +261,44 @@ demonstrated on a real rule change.
 
 ---
 
+## Generated task index
+
+Decomposed by Elyos task-decomposition agent on 2026-06-29. 29 total task files; 28 generated + 1 seed (wqe-arch-001). All validated against `packages/schema/src/schemas.ts` (draft-07). Fan-out: none (tasks enumerated individually in backlog). All tasks: `lane: "donated"`, `status: "open"`, `verifiedNeed: false`, `requestor: "TBD"` (no partner secured; honest default).
+
+| File | Title | Type | Size | Risk | Deliverable | Priority | License |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| wqe-arch-001.json | ADRs: snapshot/data format, source registry + license gate, web stack, geocoding, freshness/corrections model | design-spec | small | low | document | high | CC-BY-4.0 |
+| wqe-data-002.json | Source registry + CI license/provenance gate | data | small | medium | dataset | high | CC-BY-4.0 |
+| wqe-data-003.json | Normalized water-data schema | data | medium | medium | dataset | high | MIT |
+| wqe-pipe-004.json | Pilot ingestion: EPA ECHO/SDWIS | code | medium | medium | pr | high | MIT |
+| wqe-content-005.json | Lead explainer template + lead contaminant entry | writing | medium | medium | document | high | CC-BY-4.0 |
+| wqe-web-006.json | Static web skeleton + privacy CI gates | code | medium | medium | pr | high | MIT |
+| wqe-pipe-007.json | Core-contaminant normalization + non-detect handling | code | large | medium | pr | high | MIT |
+| wqe-engine-008.json | Deterministic explainer-generation engine | code | large | medium | pr | high | MIT |
+| wqe-data-009.json | Data-accuracy reconciliation + provenance-completeness suite | code | medium | medium | pr | medium | MIT |
+| wqe-content-010.json | Contaminant library: >= 8 core entries | writing | large | medium | document | high | CC-BY-4.0 |
+| wqe-a11y-011.json | WCAG 2.2 AA + plain-language readability hardening | code | medium | low | pr | medium | MIT |
+| wqe-pipe-012.json | Scale ingestion to a full pilot state/region | code | large | medium | pr | medium | MIT |
+| wqe-web-013.json | Privacy-preserving lookup/search | code | medium | medium | pr | medium | MIT |
+| wqe-content-014.json | Private-well guidance module | writing | medium | medium | document | medium | CC-BY-4.0 |
+| wqe-data-015.json | Service-area / geocoding using open data only | data | medium | medium | dataset | medium | ODbL-1.0 |
+| wqe-partner-016.json | Secure named partner | research | medium | medium | document | high | CC-BY-4.0 |
+| wqe-i18n-017.json | i18n framework + first non-English locale | code | large | medium | translation | medium | CC-BY-4.0 |
+| wqe-deploy-018.json | Production deploy + freshness automation + corrections/erratum | code | medium | medium | pr | medium | MIT |
+| wqe-ops-019.json | Outcomes tracking + re-review/freshness cadence + regulatory-update process | maintenance | small | low | document | low | CC-BY-4.0 |
+| wqe-pipe-020.json | Extend coverage to >= 2 additional regions + scheduled re-ingest | code | large | medium | pr | low | MIT |
+| wqe-content-021.json | Expand contaminant library (radionuclides, chromium-6, DBP subspecies) | writing | large | medium | document | medium | CC-BY-4.0 |
+| wqe-i18n-022.json | Second non-English locale | writing | medium | medium | translation | low | CC-BY-4.0 |
+| wqe-feat-023.json | Historical trend view per system | code | medium | medium | pr | low | MIT |
+| wqe-feat-024.json | Offline/PWA mode for low-connectivity users | code | medium | low | pr | low | MIT |
+| wqe-data-025.json | Open public dataset export of normalized snapshots | data | medium | medium | dataset | low | CC-BY-4.0 |
+| wqe-feat-026.json | Read-aloud / low-literacy easy-read explainer variants | writing | medium | medium | document | low | CC-BY-4.0 |
+| wqe-research-027.json | Feasibility of international sources (UK DWI, EU) | research | medium | medium | document | low | CC-BY-4.0 |
+| wqe-ops-028.json | Dependency/supply-chain audit + SRI hardening | maintenance | small | low | pr | low | MIT |
+| wqe-ops-029.json | Annual content re-validation vs. updated EPA/WHO guidance | maintenance | medium | medium | document | medium | CC-BY-4.0 |
+
+---
+
 ## Example task JSON
 
 Complete, schema-valid Task JSON for the first M0 task. `verifiedNeed` is `false` and `requestor` is

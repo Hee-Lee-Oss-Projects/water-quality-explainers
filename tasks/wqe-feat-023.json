@@ -1,0 +1,32 @@
+{
+  "id": "wqe-feat-023",
+  "title": "Historical trend view per system (sample periods over time)",
+  "project": "water-quality-explainers",
+  "type": "code",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["public-health", "water", "software"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Users may benefit from seeing how a water system's contaminant measurements have changed across multiple sample periods — whether violations have resolved, whether detected levels have trended. This is informational only, using the existing past public record. The feature must carry the standard no-verdict + limitations framing and must never imply prediction, extrapolation, or a future-safety assessment. No new data is generated; only existing snapshot data is visualized across sample periods.",
+  "objective": "Build a historical trend view per water system in the web app that displays sample-period time series from the normalized snapshot for core contaminants: (1) uses only past public record from existing snapshots; (2) carries the standard limitations/caveats (data lags, detection limits, sampling cadence, gaps); (3) never implies prediction, trend extrapolation, or a future-safety assessment; (4) carries no safety verdict or grade; (5) is accessible (WCAG 2.2 AA).",
+  "acceptanceCriteria": [
+    "Historical trend view displays contaminant measurement data across multiple sample periods from existing snapshots",
+    "View uses only past public record; no prediction, extrapolation, or future-safety assessment is implied or displayed",
+    "View carries the standard limitations caveats: data lags, detection limits, sampling cadence, coverage gaps",
+    "No safety verdict, grade, or ranking emitted in the historical view",
+    "View meets WCAG 2.2 AA; zero critical axe violations",
+    "pnpm build && pnpm test && pnpm lint pass"
+  ],
+  "resources": [
+    "https://echo.epa.gov/",
+    "https://www.w3.org/TR/WCAG22/"
+  ],
+  "output": "PR adding historical trend view per water system with limitations/caveats and no-verdict framing.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

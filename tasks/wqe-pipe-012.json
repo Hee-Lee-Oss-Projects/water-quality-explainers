@@ -1,0 +1,32 @@
+{
+  "id": "wqe-pipe-012",
+  "title": "Scale ingestion to a full pilot state/region + snapshot refresh",
+  "project": "water-quality-explainers",
+  "type": "code",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["public-health", "water", "open-data", "software"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "M2 expands coverage from the single-region pilot to a full state or region — enough to demonstrate meaningful geographic coverage for a partner adoption. State primacy-agency data must have its license verified per state before ingestion; many states publish open data but this is not assumed. Data gaps (systems with no recent monitoring, known SDWIS gaps) must be surfaced honestly in a coverage report, never silently corrected or filled with assumptions.",
+  "objective": "Extend ingestion to a full pilot state or region: (1) verify and register the license for any state primacy-agency data before ingestion; (2) ingest all available EPA SDWIS/ECHO and applicable state data for the region into refreshed, checksummed snapshots; (3) commit a coverage report that identifies which water systems have data, which have gaps, and which have monitoring lags; (4) surface upstream data gaps honestly — never silently correct or infer values for missing data.",
+  "acceptanceCriteria": [
+    "License verified and registered in the source registry for any state primacy-agency data used",
+    "Full pilot state or region ingested into refreshed, checksummed snapshots passing the CI reconciliation gate",
+    "Coverage report committed to the repo identifying systems with data, systems with gaps, and monitoring-lag details",
+    "Upstream data gaps surfaced honestly in the coverage report; no silent correction or inference of missing values",
+    "pnpm build && pnpm test && pnpm lint pass"
+  ],
+  "resources": [
+    "https://echo.epa.gov/",
+    "https://www.waterqualitydata.us/",
+    "https://www.epa.gov/ground-water-and-drinking-water"
+  ],
+  "output": "PR adding expanded ingestion for the full pilot state/region with checksummed snapshots, coverage report, and CI reconciliation.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

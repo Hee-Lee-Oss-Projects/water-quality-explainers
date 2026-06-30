@@ -1,0 +1,32 @@
+{
+  "id": "wqe-research-027",
+  "title": "Feasibility of international sources (UK DWI, EU) with license verification",
+  "project": "water-quality-explainers",
+  "type": "research",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["public-health", "water", "open-data"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "The current project scope is US-focused, using EPA/SDWIS data. International expansion to UK (DWI), EU (Drinking Water Directive), and other jurisdictions would broaden the project's public benefit. However, international data sources require per-source license verification before use — the same CI license gate applies. This feasibility study must assess whether open/PD/CC-compatible international sources exist, what their terms permit, and what schema/normalization changes international data would require.",
+  "objective": "Research the feasibility of adding international drinking-water data sources (UK Drinking Water Inspectorate, EU Drinking Water Directive, and others): (1) identify candidate open/PD/CC-licensed sources; (2) verify each candidate's license terms and confirm or rule out compatibility with the project's license gate; (3) assess schema/normalization changes required for non-US regulatory frameworks (different MCL equivalents, violation categories, unit conventions); (4) identify the regulatory-authority equivalents for 'where to get the official advisory' routing; (5) document findings and a go/no-go recommendation per source.",
+  "acceptanceCriteria": [
+    "Candidate international sources identified (UK DWI, EU DWD, others) with their data URLs and access methods",
+    "License terms verified for each candidate; compatibility with the project license gate documented",
+    "Schema/normalization changes required for non-US regulatory frameworks assessed",
+    "Regulatory-authority equivalents for 'where to get the official advisory' routing identified per jurisdiction",
+    "Go/no-go recommendation per source with rationale documented"
+  ],
+  "resources": [
+    "https://www.dwi.gov.uk/",
+    "https://environment.ec.europa.eu/topics/water/drinking-water_en",
+    "https://www.epa.gov/ground-water-and-drinking-water"
+  ],
+  "output": "Document: international source feasibility report with license assessments, schema impact analysis, and go/no-go recommendation per source.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

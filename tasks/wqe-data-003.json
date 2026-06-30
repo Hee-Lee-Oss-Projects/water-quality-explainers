@@ -1,0 +1,33 @@
+{
+  "id": "wqe-data-003",
+  "title": "Normalized water-data schema (PWS, ContaminantResult, Violation taxonomy, Citation, Snapshot, ExplainerUnit)",
+  "project": "water-quality-explainers",
+  "type": "data",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["public-health", "water", "open-data", "software"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Before any non-pilot ingestion or explainer generation can proceed, the project needs a stable, validated normalized schema that faithfully represents drinking-water measurement and violation data with full provenance. This schema is provisional until the ADR (wqe-arch-001) is recorded and the snapshot-format decision is made. The schema must capture the full chain from raw source to published explainer, including non-detect handling, violation taxonomy, and the self-approval guard on ExplainerUnit.",
+  "objective": "Define and implement the normalized water-data schema (TypeScript types + JSON Schema validation) covering: WaterSystem (pwsId, name, type, serviceArea, population, primacyAgency); ContaminantResult (pwsId, contaminantId with CAS/EPA code, measuredValue, detectionLimit, unit normalized+original, mcl, mclg, samplePeriod start+end, resultStatus); Violation (pwsId, contaminantId, category health-based/monitoring-reporting/treatment-technique/other, status, period); Citation (publisher, dataset, url, retrievedDate, sourceVintage, sourceLicense, checksum); Snapshot (id, builtAt, sources, pipelineVersion, checksum); and ExplainerUnit (pwsId, lang, snapshotId, sections, contaminantRefs, reviewStatus, reviewedBy, approvedBy, reviewLogRef, lastReviewed, contentLicense). Build-time validation must reject any record missing required Citation fields and any ExplainerUnit where approvedBy equals reviewedBy.",
+  "acceptanceCriteria": [
+    "Schema captures pwsId, contaminant identity (CAS/EPA code), measuredValue + detectionLimit with non-detect preserved as non-detect (not zero), unit (normalized + original recorded), mcl, mclg, samplePeriod (when sampled, not when published), and resultStatus",
+    "Violation taxonomy distinguishes health-based vs. monitoring/reporting vs. treatment-technique; resolved vs. open status is preserved",
+    "Every ContaminantResult and Violation requires a Citation (publisher/dataset/url/retrievedDate/sourceVintage/license/checksum) tied to a Snapshot; build-time validation rejects a record missing any required Citation field",
+    "ExplainerUnit schema enforces reviewedBy != approvedBy; build-time validation rejects a unit where approvedBy equals reviewedBy",
+    "Schema format follows the snapshot-format ADR (wqe-arch-001); schema is marked provisional until that ADR lands",
+    "pnpm build && pnpm test && pnpm lint pass"
+  ],
+  "resources": [
+    "https://echo.epa.gov/",
+    "https://www.epa.gov/dwreginfo/drinking-water-regulations",
+    "https://www.epa.gov/ground-water-and-drinking-water/safe-drinking-water-act-sdwa-compliance-data"
+  ],
+  "output": "TypeScript schema definitions and JSON Schema (packages/ or pipeline/schema/) with build-time validation that rejects incomplete citation records and self-approved ExplainerUnit entries; schema documented in the repo.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

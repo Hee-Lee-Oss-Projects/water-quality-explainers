@@ -1,0 +1,34 @@
+{
+  "id": "wqe-content-010",
+  "title": "Contaminant library: >= 8 core entries, plain-language, sourced to EPA/WHO, expert-reviewed",
+  "project": "water-quality-explainers",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["public-health", "water", "accessibility"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "The contaminant library is the expert-reviewed reference layer that the engine uses to generate per-system explainers. Each entry must explain what the contaminant is, what the regulatory limits (MCL and MCLG) mean, what a violation of each type implies, and what the data cannot tell the reader. The nitrate entry is particularly sensitive because it carries acute infant risk — it must note this neutrally and route to authorities without providing individual advice. Every entry requires expert sign-off by an approver distinct from the author.",
+  "objective": "Author >= 8 contaminant library entries (lead, copper, nitrate, arsenic, total coliform/E. coli, TTHM, HAA5, PFAS), each: (1) plain-language and accessible to a non-specialist reader; (2) sourced to EPA/WHO with retrieval dates and licenses; (3) carrying no safety verdict, grade, ranking, or product recommendation; (4) noting appropriate contaminant-specific limitations (e.g. nitrate: acute infant risk, route to authorities, no individual advice); (5) expert-signed-off by an approver distinct from the author, with a PR-tied review-log entry.",
+  "acceptanceCriteria": [
+    "At least 8 entries present: lead, copper, nitrate, arsenic, total coliform/E. coli, TTHM, HAA5, PFAS",
+    "Every figure and claim sourced to EPA or WHO with retrieval dates and license; no verbatim copying of copyrighted text",
+    "Every entry carries no safety verdict, grade, ranking, or product recommendation",
+    "Nitrate entry notes acute infant risk neutrally and routes to authorities; provides no individual advice or lab interpretation",
+    "Every entry expert-signed-off by a qualified approver (drinking-water / environmental-health / public-health professional or toxicologist) who is distinct from the entry's author",
+    "A PR-tied, append-only review-log entry committed for each entry: PR number, commit SHA, content version, reviewer + approver identity + credential, sources checked, any source-divergence decision"
+  ],
+  "resources": [
+    "https://www.epa.gov/dwreginfo/drinking-water-regulations",
+    "https://www.epa.gov/pfas/pfas-national-primary-drinking-water-regulation",
+    "https://www.epa.gov/ground-water-and-drinking-water/lead-and-copper-rule",
+    "https://www.who.int/publications/i/item/9789241549950"
+  ],
+  "output": "Document: >= 8 contaminant library entries in content/contaminants/ with expert review-log entries committed for each.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "wqe-feat-026",
+  "title": "Read-aloud / low-literacy 'easy-read' explainer variants",
+  "project": "water-quality-explainers",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["public-health", "water", "accessibility"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "The core explainer content, even when plain-language, may exceed the reading level of some target beneficiaries — particularly those with low literacy, cognitive disabilities, or who are reading in their second language. Easy-read variants use shorter sentences, simpler vocabulary, visual supports, and audio/read-aloud compatibility to extend access. All easy-read content must carry the same no-verdict and limitations framing as the standard explainers, and must be expert-reviewed for technical accuracy alongside a11y review.",
+  "objective": "Author easy-read variants of the core explainer content (simplified vocabulary, shorter sentences, visual support cues, read-aloud optimized markup) for the main contaminant entries and the explainer template: (1) meets a low-literacy readability target (e.g. Flesch-Kincaid Grade <= 6); (2) carries no safety verdict or grade; (3) includes the standard limitations and 'not a substitute for official advisories' framing; (4) is expert-reviewed for technical accuracy; (5) is a11y reviewed for screen-reader and read-aloud compatibility; (6) licensed CC-BY-4.0.",
+  "acceptanceCriteria": [
+    "Easy-read variants meet a low-literacy readability target (Flesch-Kincaid Grade <= 6 or equivalent)",
+    "Variants carry no safety verdict, grade, ranking, or product recommendation",
+    "Variants include the standard limitations section and 'not a substitute for official advisories' framing",
+    "Expert review completed for technical accuracy of health/regulatory content",
+    "Accessibility review completed for screen-reader and read-aloud compatibility",
+    "Variants licensed CC-BY-4.0"
+  ],
+  "resources": [
+    "https://www.plainlanguage.gov/",
+    "https://www.w3.org/TR/WCAG22/",
+    "https://www.epa.gov/ground-water-and-drinking-water"
+  ],
+  "output": "Document: easy-read explainer variants for core contaminant entries and the explainer template, with expert and a11y review records.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}
