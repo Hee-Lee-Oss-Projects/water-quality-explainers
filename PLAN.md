@@ -38,7 +38,7 @@ and records provenance on every published figure.
 "verified need" exists yet. The public-interest need is well-documented in the abstract (drinking-
 water information is fragmented, technical, and often inaccessible), so foundation work (M0–M2) can
 proceed as a generic public good — but the **partner and `verifiedNeed` status are TO BE SECURED**,
-and the project is not "shipped" by Elyos's *delivered, not merged* bar until a named partner
+and the project is not "shipped" by Hee-Lee Oss's *delivered, not merged* bar until a named partner
 (public-health department, water-justice / environmental-justice nonprofit, or community
 organization) confirms the need and the priority geography/languages. See *Problem & beneficiaries*
 and *Open questions*.
@@ -372,11 +372,11 @@ caveats on every explainer; (3) ships only **expert-reviewed** contaminant/healt
 **license-verified open sources**; (4) logs **no user searches** and collects no PII; (5) meets WCAG
 2.2 AA + the readability bar; and (6) is **adopted/endorsed by a named partner** in their community's
 geography and languages. Until a partner is secured, criterion (6) is **outstanding**: the site is
-"publicly usable" but not "shipped" by Elyos's bar.
+"publicly usable" but not "shipped" by Hee-Lee Oss's bar.
 
 **"Publicly shipped (no partner)" success state.** Criteria (1)–(5) can be met without a partner. If,
 by a decision point **6 months after the M3 build is production-ready**, no partner is secured, the
-steward + Elyos governance may declare **"Publicly Shipped (generic public good)"** — deployed and
+steward + Hee-Lee Oss governance may declare **"Publicly Shipped (generic public good)"** — deployed and
 distributed directly / via community channels, outcomes by best-effort self-report. A later partner
 endorsement upgrades the status rather than gating launch.
 
@@ -436,7 +436,7 @@ search) and the **partner being secured** (can start in parallel from M0). M4 �
 ## Work breakdown
 
 The itemized, schema-mapped backlog lives in **TASKS.md**, organized by the M0–M4 milestones above.
-Each task maps to an Elyos Task JSON (see schema), is sized (small/medium/large), risk-tagged, and
+Each task maps to a Hee-Lee Oss Task JSON (see schema), is sized (small/medium/large), risk-tagged, and
 names a reviewer. TASKS.md includes acceptance criteria for the most important tasks per milestone,
 milestone Definitions of Done, a backlog, and a complete, schema-valid example Task JSON.
 
@@ -456,7 +456,7 @@ milestone Definitions of Done, a backlog, and a complete, schema-valid example T
   explainers in front of beneficiaries.
 - **Partner / requestor: TO BE SECURED** — a named public-health dept / water-justice nonprofit /
   community org confirming need, geography, and languages, and ultimately endorsing/adopting.
-- **Elyos governance/board:** arbitrates edge cases, risk-tier escalations, and the no-verdict /
+- **Hee-Lee Oss governance/board:** arbitrates edge cases, risk-tier escalations, and the no-verdict /
   not-advice guardrails per the good-deed definition.
 
 ---
@@ -469,7 +469,7 @@ milestone Definitions of Done, a backlog, and a complete, schema-valid example T
 - **Tooling/libraries:** Node/TS data tooling (ADR), web framework (ADR), test stack (Vitest,
   Playwright, axe-core/pa11y), readability checker.
 - **Hosting:** static host (no app server), so no server-side query logs are possible.
-- **Elyos pieces:** Task schema (`packages/schema`), CLI workspace prep / PR flow (donated lane),
+- **Hee-Lee Oss pieces:** Task schema (`packages/schema`), CLI workspace prep / PR flow (donated lane),
   good-deed definition & risk-tier governance, review/sign-off process.
 - **Human/expert dependency:** drinking-water/environmental-health expert reviewers and a partner org
   — the gating non-software dependencies.
@@ -504,7 +504,7 @@ agency endorsement; (5) user-search privacy.
 **Controls.**
 - **No secrets in client or commits.** Source APIs that need keys are used **only in the pipeline /
   CI** via secret stores; **never** written to logs, snapshots, explainers, or committed files (per
-  Elyos rule). Static hosting has nothing to leak at runtime.
+  Hee-Lee Oss rule). Static hosting has nothing to leak at runtime.
 - **No telemetry / no PII / no search logging — defense in depth.** (1) Strict CSP with locked
   `connect-src` / `script-src` / `img-src` / `font-src 'self'`; (2) **runtime network-interception
   E2E** exercising every flow, failing the build on any unexpected outbound request; (3) static CI
@@ -562,11 +562,11 @@ agency endorsement; (5) user-search privacy.
 
 ## References
 
-- Elyos work rules — `C:\code\elyos\CLAUDE.md`
-- Good-deed definition & risk tiers — `C:\code\elyos\docs\good-deed-definition.md`
-- Task schema — `C:\code\elyos\packages\schema\src\schemas.ts`
-- Portfolio roadmap (this project: Track 10) — `C:\code\elyos\planning\ROADMAP.md`
-- Sibling exemplar (medium-risk safety) — `C:\code\elyos\planning\projects\proper-prepper\PLAN.md`
+- Hee-Lee Oss work rules — `C:\code\hee-lee-oss\CLAUDE.md`
+- Good-deed definition & risk tiers — `C:\code\hee-lee-oss\docs\good-deed-definition.md`
+- Task schema — `C:\code\hee-lee-oss\packages\schema\src\schemas.ts`
+- Portfolio roadmap (this project: Track 10) — `C:\code\hee-lee-oss\planning\ROADMAP.md`
+- Sibling exemplar (medium-risk safety) — `C:\code\hee-lee-oss\planning\projects\proper-prepper\PLAN.md`
 - Authoritative data/reference sources (license-checked per use): EPA SDWIS/ECHO, EPA Safe Drinking
   Water Act regulations (MCL/MCLG, Lead & Copper Rule, 2024 PFAS NPDWR), Water Quality Portal,
   USGS water data, state primacy agencies, WHO Guidelines for Drinking-water Quality.

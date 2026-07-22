@@ -22,8 +22,8 @@
     "ADRs are committed as documents; the normalized schema (wqe-data-003) and pipeline (wqe-pipe-004) are sequenced to depend on these decisions"
   ],
   "resources": [
-    "C:\\code\\elyos\\planning\\projects\\water-quality-explainers\\PLAN.md",
-    "C:\\code\\elyos\\planning\\ROADMAP.md",
+    "C:\\code\\hee-lee-oss\\planning\\projects\\water-quality-explainers\\PLAN.md",
+    "C:\\code\\hee-lee-oss\\planning\\ROADMAP.md",
     "https://echo.epa.gov/",
     "https://www.waterqualitydata.us/",
     "https://www.epa.gov/ground-water-and-drinking-water"

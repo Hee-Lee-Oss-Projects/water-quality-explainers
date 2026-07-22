@@ -2,9 +2,9 @@
 
 > Status: Draft · Version: 0.1.0 · Last updated: 2026-06-28 · Owner: TBD (maintainer) · Lane: donated
 
-## How these tasks map to Elyos
+## How these tasks map to Hee-Lee Oss
 
-Each task below becomes an Elyos **Task JSON** validated against
+Each task below becomes a Hee-Lee Oss **Task JSON** validated against
 `packages/schema/src/schemas.ts`. Field mapping:
 
 - `id` — stable slug ID, e.g. `wqe-arch-001`.
@@ -218,7 +218,7 @@ privacy-preserving lookup live with no query logging (verified); private-well mo
 project-level *Definition of Shipped (partner-adopted)*.
 
 **Decision point (so a finished site isn't stranded):** if no partner is secured by **6 months after
-the M3 production build is ready**, the steward + Elyos governance may declare **"Publicly Shipped
+the M3 production build is ready**, the steward + Hee-Lee Oss governance may declare **"Publicly Shipped
 (generic public good)"** — criteria (1)–(5) met, deployed/distributed directly or via community
 channels, outcomes by best-effort self-report. A later partner endorsement upgrades the status.
 
@@ -263,7 +263,7 @@ demonstrated on a real rule change.
 
 ## Generated task index
 
-Decomposed by Elyos task-decomposition agent on 2026-06-29. 29 total task files; 28 generated + 1 seed (wqe-arch-001). All validated against `packages/schema/src/schemas.ts` (draft-07). Fan-out: none (tasks enumerated individually in backlog). All tasks: `lane: "donated"`, `status: "open"`, `verifiedNeed: false`, `requestor: "TBD"` (no partner secured; honest default).
+Decomposed by Hee-Lee Oss task-decomposition agent on 2026-06-29. 29 total task files; 28 generated + 1 seed (wqe-arch-001). All validated against `packages/schema/src/schemas.ts` (draft-07). Fan-out: none (tasks enumerated individually in backlog). All tasks: `lane: "donated"`, `status: "open"`, `verifiedNeed: false`, `requestor: "TBD"` (no partner secured; honest default).
 
 | File | Title | Type | Size | Risk | Deliverable | Priority | License |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -329,8 +329,8 @@ Complete, schema-valid Task JSON for the first M0 task. `verifiedNeed` is `false
     "ADRs are committed as documents; the normalized schema (wqe-data-003) and pipeline (wqe-pipe-004) are sequenced to depend on these decisions"
   ],
   "resources": [
-    "C:\\code\\elyos\\planning\\projects\\water-quality-explainers\\PLAN.md",
-    "C:\\code\\elyos\\planning\\ROADMAP.md",
+    "C:\\code\\hee-lee-oss\\planning\\projects\\water-quality-explainers\\PLAN.md",
+    "C:\\code\\hee-lee-oss\\planning\\ROADMAP.md",
     "https://echo.epa.gov/",
     "https://www.waterqualitydata.us/",
     "https://www.epa.gov/ground-water-and-drinking-water"

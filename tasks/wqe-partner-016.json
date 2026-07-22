@@ -11,7 +11,7 @@
   "deliverable": "document",
   "tokenEstimate": "medium",
   "status": "open",
-  "context": "The Elyos Definition of Shipped requires that a named partner organization confirms the need in writing and endorses or adopts the project for their community's geography and languages. Without this, water-quality-explainers can be 'publicly usable' but not 'shipped' by the project's own standard. All Task JSON files currently carry verifiedNeed: false and requestor: 'TBD' because no partner is secured. This task is the gating human-decision task for M3 and the overall project Definition of Shipped.",
+  "context": "The Hee-Lee Oss Definition of Shipped requires that a named partner organization confirms the need in writing and endorses or adopts the project for their community's geography and languages. Without this, water-quality-explainers can be 'publicly usable' but not 'shipped' by the project's own standard. All Task JSON files currently carry verifiedNeed: false and requestor: 'TBD' because no partner is secured. This task is the gating human-decision task for M3 and the overall project Definition of Shipped.",
   "objective": "Identify, engage, and secure a named partner organization (public-health department, water-justice nonprofit, environmental-justice org, or community organization) that: (1) confirms the need in writing (letter of support or lightweight MOU); (2) identifies priority geography (region/state), priority water systems, and priority languages; (3) endorses and adopts the project for their community. On success, update verifiedNeed to true and requestor to the named org across all relevant task files.",
   "acceptanceCriteria": [
     "A named partner organization identified and engaged",
